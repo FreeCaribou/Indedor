@@ -4,7 +4,7 @@
   "author": "FreeCaribou",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "node server.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -25,6 +25,7 @@
     "@ionic/angular": "^5.0.0",
     "@ionic/pwa-elements": "^3.0.2",
     "@types/leaflet": "^1.5.19",
+    "express": "^4.17.1",
     "leaflet": "^1.7.1",
     "rxjs": "~6.5.5",
     "tslib": "^2.0.0",
