@@ -1,0 +1,13 @@
+<ion-card>
+  <img src="http://kinderscientific.com/wp-content/uploads/2018/06/Work-in-Progress.jpg" height="100" />
+  <ion-card-header>
+    <ion-card-subtitle>{{independant.name}}</ion-card-subtitle>
+    <ion-card-title>{{independant.profession}}</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    {{independant.description}}
+  </ion-card-content>
+  <ion-item>
+    <ion-button [routerLink]="['detail', independant.id]" fill="outline" slot="start">Detail</ion-button>
+  </ion-item>
+</ion-card>

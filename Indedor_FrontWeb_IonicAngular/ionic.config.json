@@ -1,0 +1,7 @@
+{
+  "name": "Indedor_FrontWeb_IonicAngular",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
