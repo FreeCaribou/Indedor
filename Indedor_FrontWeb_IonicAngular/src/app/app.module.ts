@@ -12,10 +12,12 @@ import { AppRoutingModule } from './app-routing.module';
 import {
   HttpClientModule,
   HttpClient,
-  HTTP_INTERCEPTORS
 } from '@angular/common/http';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { environment } from 'src/environments/environment';
+import { UserDataService } from './shared/services/data/user/user.data.service';
+import { UserMockDataService } from './shared/services/data/user/user.mock.service';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, '../assets/i18n/', '.json');
@@ -40,7 +42,8 @@ export function HttpLoaderFactory(http: HttpClient) {
   providers: [
     StatusBar,
     SplashScreen,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+    environment.mock ? { provide: UserDataService, useClass: UserMockDataService } : UserDataService
   ],
   bootstrap: [AppComponent]
 })

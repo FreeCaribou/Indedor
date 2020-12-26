@@ -4,12 +4,15 @@
   },
   "Menu": {
     "Home": "Home",
-    "User": "User"
+    "User": "User",
+    "Detail": "Detail"
   },
   "Independant": {
     "ChooseYour": "Choose your independant"
   },
   "User": {
-    "Login": "Login"
+    "Login": "Login",
+    "Password": "Password",
+    "Email": "E-mail"
   }
 }

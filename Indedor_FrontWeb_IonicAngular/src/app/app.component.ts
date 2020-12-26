@@ -40,6 +40,8 @@ export class AppComponent implements OnInit {
   }
 
   initializeApp() {
+    console.log('the platform', this.platform.platforms());
+
     // check the language
     this.translate.addLangs(this.acceptedLanguages);
 

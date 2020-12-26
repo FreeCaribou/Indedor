@@ -1,4 +1,5 @@
 <ion-app>
+  <!-- IonSpan is to have the menu always present for not mobile screen -->
   <ion-split-pane contentId="main-content">
     <ion-menu contentId="main-content" type="overlay">
       <ion-content>
@@ -6,13 +7,22 @@
           <ion-list-header>Indedor</ion-list-header>
           <ion-note>{{'General.HelloWorld' | translate}}</ion-note>
 
-          <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
-            <ion-item (click)="selectedIndex = i" routerDirection="root" [routerLink]="[p.url]" lines="none"
-              detail="false" [class.selected]="selectedIndex == i">
-              <ion-icon slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon>
-              <ion-label>{{ p.title }}</ion-label>
+          <ion-menu-toggle auto-hide="false">
+            <ion-item (click)="selectedIndex = 0" routerDirection="root" [routerLink]="['/home']" lines="none"
+              detail="false" [class.selected]="selectedIndex == 0">
+              <ion-icon slot="start" [ios]="'home-outline'" [md]="'home-sharp'"></ion-icon>
+              <ion-label>{{ 'Menu.Home' | translate }}</ion-label>
             </ion-item>
           </ion-menu-toggle>
+
+          <ion-menu-toggle auto-hide="false">
+            <ion-item (click)="selectedIndex = 1" routerDirection="root" [routerLink]="['/user']" lines="none"
+              detail="false" [class.selected]="selectedIndex == 1">
+              <ion-icon slot="start" [ios]="'person-circle-outline'" [md]="'person-circle-sharp'"></ion-icon>
+              <ion-label>{{ 'Menu.User' | translate }}</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+
         </ion-list>
 
         <!-- <ion-list id="labels-list">

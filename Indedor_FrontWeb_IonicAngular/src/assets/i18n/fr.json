@@ -10,6 +10,8 @@
     "ChooseYour": "Choissisez votre indépendant"
   },
   "User": {
-    "Login": "Connection"
+    "Login": "Connection",
+    "Password": "Mot de passe",
+    "Email": "Email"
   }
 }

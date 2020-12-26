@@ -4,14 +4,15 @@ import { LoginComponent } from './components/login/login.component';
 import { UserRoutingModule } from './user-routing.module';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { TranslateModule } from '@ngx-translate/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { IonicModule } from '@ionic/angular';
 
 @NgModule({
-  declarations: [LoginComponent],
   imports: [
-    CommonModule,
     SharedModule,
     UserRoutingModule,
-    TranslateModule,
-  ]
+    TranslateModule
+  ],
+  declarations: [LoginComponent],
 })
 export class UserModule { }
