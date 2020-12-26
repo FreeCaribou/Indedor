@@ -1,0 +1,15 @@
+{
+  "General": {
+    "HelloWorld": "Bonjour le monde"
+  },
+  "Menu": {
+    "Home": "Acceuil",
+    "User": "Utilisateur"
+  },
+  "Independant": {
+    "ChooseYour": "Choissisez votre indépendant"
+  },
+  "User": {
+    "Login": "Connection"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "General": {
+    "HelloWorld": "Hello World"
+  },
+  "Menu": {
+    "Home": "Home",
+    "User": "User"
+  },
+  "Independant": {
+    "ChooseYour": "Choose your independant"
+  },
+  "User": {
+    "Login": "Login"
+  }
+}

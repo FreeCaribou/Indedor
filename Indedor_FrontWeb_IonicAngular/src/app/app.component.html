@@ -4,7 +4,7 @@
       <ion-content>
         <ion-list id="inbox-list">
           <ion-list-header>Indedor</ion-list-header>
-          <ion-note>Hello World</ion-note>
+          <ion-note>{{'General.HelloWorld' | translate}}</ion-note>
 
           <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
             <ion-item (click)="selectedIndex = i" routerDirection="root" [routerLink]="[p.url]" lines="none"
@@ -23,6 +23,12 @@
             <ion-label>{{ label }}</ion-label>
           </ion-item>
         </ion-list> -->
+
+        <ion-select [value]="selectedLanguage" (ionChange)="changeLanguage($event.detail.value)" interface="popover">
+          <ion-select-option value="en">English</ion-select-option>
+          <ion-select-option value="fr">Français</ion-select-option>
+          <ion-select-option value="nl">Nederlands</ion-select-option>
+        </ion-select>
 
       </ion-content>
     </ion-menu>
